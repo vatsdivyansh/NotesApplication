@@ -4,6 +4,10 @@ plugins {
 
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+
+    kotlin("plugin.serialization") version "2.0.20"
+
+//    kotlin("jvm") version "2.0.20"
 }
 
 android {
@@ -81,4 +85,8 @@ dependencies {
 
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
+
+    implementation("androidx.navigation:navigation-compose:2.8.0-beta02")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
 }
